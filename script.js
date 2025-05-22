@@ -1,14 +1,10 @@
-// Dark/Light Mode Toggle
-const toggleBtn = document.getElementById('toggle-mode');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  toggleBtn.textContent = document.body.classList.contains('dark') ? '🌙' : '☀';
-});
+// Add smooth scroll to anchors
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-// Contact Form
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thanks for your message!');
-  form.reset();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });

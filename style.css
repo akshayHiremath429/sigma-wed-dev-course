@@ -1,165 +1,78 @@
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333;
-    --accent: #0077ff;
-}
-
-body.dark {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --accent: #00aaff;
-}
-
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    transition: all 0.3s ease;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: var(--accent);
-    color: #fff;
-    padding: 1rem 0;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+    background-color: #004466;
+    color: white;
+    padding: 1em;
+    text-align: center;
 }
 
 nav a {
-    color: #fff;
+    margin: 0 15px;
+    color: white;
     text-decoration: none;
-    font-weight: 500;
-}
-
-#toggle-mode {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: #fff;
 }
 
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, var(--accent), #003366);
+    background: #008CBA;
     color: white;
+    text-align: center;
+    padding: 50px;
 }
 
-.hero h2 span {
-    color: #ffcc00;
-}
-
-.btn {
-    background: #fff;
-    color: var(--accent);
+.hero .cta-btn {
     padding: 10px 20px;
+    background: #FFD700;
+    color: black;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
 }
 
-.section {
-    padding: 60px 0;
-}
-
-.projects .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.project-card {
-    background: #f5f5f5;
-    padding: 20px;
-    flex: 1;
+section {
+    padding: 30px;
+    margin: 20px 0;
+    background-color: white;
     border-radius: 8px;
 }
 
-body.dark .project-card {
-    background: #1e1e1e;
-}
-
-.skills ul {
-    list-style: none;
+.course-grid {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.skills li {
-    background: var(--accent);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-.testimonial {
-    background: #eee;
+.course {
+    flex: 1;
     padding: 20px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.testimonials blockquote {
+    font-style: italic;
     margin-bottom: 20px;
-    border-left: 5px solid var(--accent);
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contact input,
-.contact textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact button {
-    background: var(--accent);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 footer {
+    background-color: #004466;
+    color: white;
     text-align: center;
     padding: 20px;
-    background: var(--accent);
-    color: #fff;
-    margin-top: 40px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+footer .social-icons {
+    margin-bottom: 10px;
+}
 
-    .project-list {
-        flex-direction: column;
-    }
-
-    .skills ul {
-        justify-content: center;
-    }
+footer .social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
