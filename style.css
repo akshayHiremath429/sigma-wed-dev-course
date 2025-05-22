@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #004466;
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin-left: 20px;
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    background-color: #005f73;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero .cta-btn {
+    padding: 12px 25px;
+    background: #FFD700;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #004466;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.service-grid,
+.portfolio-grid,
+.team-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service,
+.portfolio-item,
+.team-member {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service h3,
+.team-member h3 {
+    color: #004466;
+}
+
+footer {
+    background-color: #004466;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-icons a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
