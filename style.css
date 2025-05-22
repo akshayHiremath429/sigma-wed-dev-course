@@ -1,91 +1,165 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --accent: #0077ff;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --accent: #00aaff;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    transition: all 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
 header {
-    background-color: #004466;
-    color: white;
-    padding: 1em 0;
+    background: var(--accent);
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
 }
 
-header .logo h1 {
-    margin-left: 20px;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-nav a {
-    margin: 0 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
+#toggle-mode {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #fff;
 }
 
 .hero {
-    background-color: #005f73;
-    color: white;
-    padding: 60px 20px;
     text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--accent), #003366);
+    color: white;
 }
 
-.hero .cta-btn {
-    padding: 12px 25px;
-    background: #FFD700;
-    color: black;
+.hero h2 span {
+    color: #ffcc00;
+}
+
+.btn {
+    background: #fff;
+    color: var(--accent);
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.projects .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: #f5f5f5;
+    padding: 20px;
+    flex: 1;
+    border-radius: 8px;
+}
+
+body.dark .project-card {
+    background: #1e1e1e;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    background: var(--accent);
+    color: white;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-h2 {
-    color: #004466;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.service-grid,
-.portfolio-grid,
-.team-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.service,
-.portfolio-item,
-.team-member {
-    background: #fff;
+.testimonial {
+    background: #eee;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--accent);
 }
 
-.service h3,
-.team-member h3 {
-    color: #004466;
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: var(--accent);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 footer {
-    background-color: #004466;
-    color: white;
     text-align: center;
     padding: 20px;
+    background: var(--accent);
+    color: #fff;
+    margin-top: 40px;
 }
 
-footer .social-icons a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-list {
+        flex-direction: column;
+    }
+
+    .skills ul {
+        justify-content: center;
+    }
 }
